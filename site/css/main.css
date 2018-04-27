@@ -7,6 +7,22 @@ html, body{
     margin-bottom: 0;
 }
 
+/* .nav_bar_header h1{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin: auto; */
+}
+
+nav.nav_bar_header{
+    padding-top: 0;
+    width: 100vw;
+    height: 40px;
+}
+
+
+@media only screen and (min-device-width:400px){
+    
 #intro{
     width: 100vw;
     height: 100vh;
@@ -210,11 +226,9 @@ section.sec2{
 }
 
 
+}
 
 
-
-
-/* .about_us_text_wrapper p, h1{} */
 
 ::-webkit-scrollbar{
     display: none;
