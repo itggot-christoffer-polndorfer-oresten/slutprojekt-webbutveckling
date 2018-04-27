@@ -4,6 +4,7 @@ html, body{
     padding: 0;
     width: 100vw;
     height: 100vh;
+    margin-bottom: 0;
 }
 
 #intro{
@@ -40,11 +41,7 @@ html, body{
     background-color: rgba(0, 0, 0, 0.35);
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
-
-nav{
+nav.nav_bar_header{
     position: fixed;
     top: 0;
     left: 0;
@@ -65,12 +62,16 @@ nav.header_info{
     padding: 22px 20px;
     height: 80px;
     float: left;
-    
     transition: 0.3s;
 }
 
-nav.black.header_info{
-    color: #fff;
+nav h1{
+    float: left;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 12px 30px;
 }
 
 nav ul{
@@ -109,13 +110,112 @@ nav ul li a:hover{
     background:  #e19828;
     color:white;
     border-radius: 6px;
+    text-decoration: underline;
 }
 
-.test{
-    width: 1000px;
-    height: 1000px;
-    background-color: blue;
+section.sec1{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(10, 10vh);
+
+}
+
+.about_us{
+    background-color: white;
+    grid-column: span 10;
+    grid-row: 1 / 6;
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.about_us_text_wrapper{
+    padding: 0;
+    margin: 0;
+    grid-column: 2 / 4;
+    grid-row: 1 / 6;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+.about_us_img{
+    grid-column: 5 / 11;
+    grid-row: span 6;
+    width: 100%;
+    height: 100%;
+}
+
+.about_us_text_wrapper h1{
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.our_heritage{
+    grid-column: span 10;;
+    grid-row: 6 / 11;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.our_heritage_text_wrapper{
+    grid-column: 7 / 10;
+    grid-row: span 6;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+
+.our_heritage_img{
+    grid-column: 1 / 6;
+    grid-row: span 6;
+    width: 100%;
+    height: 100%
+}
+
+.our_heritage_text_wrapper h1{
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+section.sec2{
+    width: 100vw;
+    height: 45vh;
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(10, 10vh);
+    background-color: rgb(51, 51, 51);
+}
+
+.quote_wrapper{
+    grid-column: 4 / 8;
+    grid-row: 2 / 4;
+    
+}
+
+.sec2 p{
+    font-style: italic;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 30px;     
 }
 
 
 
+
+
+
+/* .about_us_text_wrapper p, h1{} */
+
+::-webkit-scrollbar{
+    display: none;
+}
