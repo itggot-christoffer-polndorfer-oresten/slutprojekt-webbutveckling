@@ -7,3 +7,7 @@ $("body").scroll(function (e) {
     }
 })
 
+function toggleMenu(){
+    var element = document.querySelector(".hamburger_slidemenu");
+    element.classList.toggle("show");
+
