@@ -140,6 +140,7 @@ nav ul li a:hover{
     grid-column: 2 / 4;
     grid-row: 1 / 6;
     font-family: 'Quicksand', sans-serif;
+    color: black;
     text-align: center;
     margin: auto;
 }
@@ -160,7 +161,7 @@ nav ul li a:hover{
 .our_heritage{
     grid-column: span 10;;
     grid-row: 6 / 11;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 
     display: grid;
     grid-template-columns: repeat(10, 10vw);
@@ -223,6 +224,26 @@ section.sec2{
     display: none;
 }
 
+.about_us_bg_img{
+    display: none;
+}
+
+.about_us_bg_img_desktop{
+    width: 100vw;
+    height: 100vh;
+}
+
+.about_us_page_wrapper{
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(10, 10vh);
+}
+
+.about_us_headline_wrapper{
+    grid-column: 4 / 8;
+    grid-row: 3 / 4;
+    color: white;
+}
 
 @media only screen and (max-device-width:500px){
 
@@ -257,15 +278,14 @@ section.sec2{
         grid-auto-columns: 1fr;
         position: fixed;
         box-sizing: border-box;
-        transition: 0.3s;
         z-index: 100;
     }
 
     h1.the_greatest_bar {
         text-decoration: underline;
         margin: 0;
-        float: initial;
         padding: 0;
+        float: initial;
         color: white;
         font-family: 'Quicksand', sans-serif; 
         text-align: center;
@@ -408,6 +428,7 @@ section.sec2{
 
     .about_us h1{
         text-decoration: underline;
+        color: black;
     }
 
     .our_heritage{
@@ -467,9 +488,16 @@ section.sec2{
     .about_us_page_wrapper{
         width: 100vw;
         height: 200vh;
-        background-color: teal;
+        background-color: rgb(255, 255, 255);
+
+        display: grid;
+        grid-template-columns: repeat(10, 10vw);
+        grid-template-rows: repeat(10, 20vh);
     }
 
+    .about_us_bg_img_desktop{
+        display: none;
+    }
     .about_us_bg_img{
         top: 0;
         width: 100vw;
@@ -478,16 +506,57 @@ section.sec2{
         z-index: 0;
     }
 
-    .about_us_info{
+    .about_us_headline_wrapper{
         display: grid;
         text-align: center;
+        grid-column: 3 / 9;
+        grid-row: 2 / 3;
     }
 
-    h1.about_us_headline{
+    h1.about_us_headline2{
         margin: 0;
         position: relative;
-        color: white;
-
-        
+        font-family: 'Quicksand', sans-serif;
+        text-decoration: underline;
+        color: white;  
+        letter-spacing: 5px; 
     }
+
+    .list_of_staff{
+        grid-column: 3 / 9;
+        grid-row: 3 / 6;
+        z-index: 10;
+        color: white;
+        font-family: 'Quicksand', sans-serif;  
+    }
+
+    ul.list{
+        list-style-type: none;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    li.position{
+        text-decoration: underline;
+        padding-bottom: 3vh;
+        font-size: 1.5em;
+    }
+
+    li.name{
+        font-style: italic;
+        padding-bottom: 6vh;
+        font-size: 1.2em;
+    }
+
+    .parralax_effect_img{
+        background-image: url(/site/img/cigar_parralax_img.jpg);
+        background-size: cover;
+        grid-column: span 10;
+        grid-row: 6 / 8;
+    }
+
+
 }
