@@ -12,7 +12,7 @@ function togglehamburgerMenu(){
     element.classList.toggle("show_hamburgermenu");
 }
 
-function togglehamburgerMenu_header(){
-    var element = document.querySelector(".nav_bar_header");
-    element.classList.toggle("black");
-}
+// function togglehamburgerMenu_header(){
+//     var element = document.querySelector(".nav_bar_header");
+//     element.classList.toggle("black");
+// }
