@@ -19,6 +19,7 @@ html, body{
     padding: 10px 100px;
     box-sizing: border-box;
     transition: 0.3s;
+    z-index: 10000;
 }
 
 #intro{
@@ -286,6 +287,72 @@ ul.list{
     font-size: 1.5em;
     font-style: italic;
 }
+
+/* drinks desktop */
+
+.drinks_page_wrapper{
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(40, 10vh);
+    width: 100vw;
+    height: auto;
+}
+
+.drinks_landing{
+    width: 100vw;
+    height: 100vh;
+    grid-column: span 10;
+    grid-row: span 10;
+
+    display: grid;
+    grid-template-columns: repeat(10, 10vw);
+    grid-template-rows: repeat(10, 10vh);
+    overflow-y: hidden;
+    position: relative;  
+
+}
+.drinks_bg{
+    position: absolute;
+    z-index: -100;
+}
+
+.drinks_headline_wrapper{
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    text-align: center;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 2em; 
+    text-decoration: underline;
+    position: relative;
+}
+
+.arrow_downwards{
+    color: white;
+    z-index: 100;
+    grid-column: 5 / 7;
+    grid-row: 9 / 11;
+    
+    position: relative;
+    scroll-behavior: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#arrow{            
+    font-size: 10em;
+}
+
+#arrow:hover{
+    font-size: 11.5em;
+    transition: 0.2s;
+}
+
+
+
+
 
 @media only screen and (max-device-width:500px){
 
@@ -609,6 +676,19 @@ ul.list{
         height: auto;
     }
 
+    .drinks_landing{
+        width: 100vw;
+        height: 100vh;
+        grid-column: span 10;
+        grid-row: span 10;
+
+        display: grid;
+        grid-template-columns: repeat(10, 10vw);
+        grid-template-rows: repeat(10, 10vh);
+        overflow-y: hidden;
+        position: relative;  
+    }
+
     .drinks_bg{
         width: 100vw;
         height: 100vh;
@@ -637,6 +717,7 @@ ul.list{
         font-family: "Quicksand", sans-serif;
         text-decoration: underline;
         letter-spacing: 0.2em;
+        font-size: 1em;
     }
 
     .arrow_downwards{
@@ -659,16 +740,39 @@ ul.list{
         font-size: 5.5em;
         transition: 0.2s;
     }
-
-    ul.drinks_image_info_list{
-        list-style: none;
-    }
-
-    .drink_img image{
+    
+    .gallery{
+        background-color:  rgb(51, 51, 51);
         width: 100vw;
         height: auto;
-        grid-column: span 10;
-        grid-row: span 5;
-        
+        display: flex;
+        padding-top: 5vh;
+
     }
+    .gallery_item{
+        width: 100%;
+        max-width: 100vw;  
+        height: auto;
+        font-family: "Quicksand",  sans-serif;
+        box-shadow: 1px 2px  rgba(0, 0, 0, 0.35); 
+        box-sizing: border-box;
+        margin: 1rem;
+    }
+    .gallery_image{
+        width: 100vw;
+        display: block;
+    }
+    .gallery_item_info{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        text-align: center;
+        padding-bottom: 10vh;
+    }
+    
+    .drinks_info_headline{
+        color: black;
+        text-decoration: underline;
+        text-align: center;
+    }
+
 }
