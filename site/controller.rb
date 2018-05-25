@@ -1,2 +1,2 @@
 layout('layout.html.erb')
-# ignore('minify.rb')
+ignore('minify.rb')
